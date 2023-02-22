@@ -21,8 +21,8 @@ then
 	echo "Your MAC Address Is: "$(ip link show eth0 | grep link/ether | awk '{print $2}')
 elif [ $a == 3 ];
 then
-	read -p "Write Your Target Domain Name: "domain
-	echo "%domain IP Address IS: "$(ping -c 2 $domain | awk '{print $5}')
+	read -p "Write Your Target Domain Name: " domain
+	echo "$domain IP Address IS: "$(ping -c 2 $domain | awk '{print $5}')
 elif [ $a == 0 ];
 then
 	exit
